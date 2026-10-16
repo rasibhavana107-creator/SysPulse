@@ -1,0 +1,54 @@
+{
+ "isolation_forest": {
+  "precision": 0.8793103448275862,
+  "recall": 0.8947368421052632,
+  "f1": 0.8869565217391304,
+  "fpr": 0.0050578034682080926,
+  "tp": 51,
+  "fp": 7,
+  "fn": 6,
+  "tn": 1377,
+  "auc": 0.9800730149072102,
+  "latency_ms_per_window": 0.017409947258855092
+ },
+ "static_rules": {
+  "precision": 1.0,
+  "recall": 0.017543859649122806,
+  "f1": 0.034482758620689655,
+  "fpr": 0.0,
+  "tp": 1,
+  "fp": 0,
+  "fn": 56,
+  "tn": 1384
+ },
+ "train_windows": 1440,
+ "test_windows": 1441,
+ "test_anomalous_windows": 57,
+ "per_fault": {
+  "cpu_spike": {
+   "windows": 11,
+   "iforest": 1.0,
+   "rules": 0.09090909090909091
+  },
+  "disk_thrash": {
+   "windows": 14,
+   "iforest": 1.0,
+   "rules": 0.0
+  },
+  "fork_bomb": {
+   "windows": 10,
+   "iforest": 1.0,
+   "rules": 0.0
+  },
+  "memory_leak": {
+   "windows": 16,
+   "iforest": 0.8125,
+   "rules": 0.0
+  },
+  "net_exfil": {
+   "windows": 6,
+   "iforest": 0.5,
+   "rules": 0.0
+  }
+ }
+}
